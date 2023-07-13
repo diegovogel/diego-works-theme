@@ -30,3 +30,139 @@
 }
 
 // END: fancy section heading.
+
+//
+//
+// BEGIN: project card.
+
+$radius__project: 6px;
+
+.project-card {
+  border: solid 1px $color__black;
+  position: relative;
+  border-radius: $radius__project;
+
+  .card__image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: center;
+    border-radius: $radius__project $radius__project 0 0;
+    border-bottom: solid 1px $color__black;
+  }
+
+  .card__text {
+    padding: 18px;
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+
+    @media (min-width: $bp-m) {
+      padding: 30px;
+      align-items: flex-start;
+    }
+
+    ul {
+      padding: 0 0 0 0.8em;
+    }
+  }
+
+  .my-role__heading {
+    font-size: 1em;
+    font-family: $font-fam__secondary;
+  }
+
+  .card__heading {
+    @include typo__heading--s;
+    margin: 0;
+  }
+
+  .card__tags {
+    @include typo__tag;
+    color: $color__text--gray;
+  }
+}
+
+// END: project card.
+
+//
+//
+// BEGIN: buttons.
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 15px 40px;
+  border: solid 2px $color__black;
+  font-family: $font-fam__secondary;
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: $color__black;
+  border-radius: 5px;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+.button--outline {
+  background-color: none;
+
+  @media (hover: none) {
+    background-color: $color__black;
+    color: white;
+  }
+
+  @media (hover: hover) {
+    &:hover, &:focus {
+      background-color: $color__black;
+      color: white;
+    }
+  }
+}
+
+.button--small {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+// END: buttons.
+
+//
+//
+// BEGIN: misc elements.
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+a {
+  color: $color__action--text;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:focus {
+    color: $color__text;
+  }
+
+  @media (hover: none) {
+    text-decoration: underline;
+  }
+
+  @media (hover: hover) {
+    &:hover, &:focus {
+      text-decoration: underline;
+      color: $color__text;
+    }
+  }
+}
+
+// END: misc elements.

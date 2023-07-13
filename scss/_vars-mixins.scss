@@ -12,6 +12,7 @@ $color__action--black: #3D302A;
 $color__action--text: #E05210;
 $color__black: #000000;
 $color__text: $color__black;
+$color__text--gray: #767676;
 
 $bp-s: 30em; // 480px
 $bp-m: 45em; // 720px
@@ -47,8 +48,22 @@ $bp-3xl: 120em; // 1920px
   line-height: 1.2;
 }
 
-@mixin body-text {
+@mixin typo__tag {
+  font-family: $font-fam__secondary;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@mixin narrow-content {
   max-width: calc(var(--content--narrow) + var(--pad__body-x) * 2);
+  padding: 0 var(--pad__body-x);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin wide-content {
+  max-width: calc(var(--content--wide) + var(--pad__body-x) * 2);
   padding: 0 var(--pad__body-x);
   margin-left: auto;
   margin-right: auto;

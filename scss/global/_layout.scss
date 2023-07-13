@@ -8,38 +8,8 @@ main {
   overflow-x: hidden;
 }
 
-img {
-  max-width: 100%;
-  vertical-align: bottom;
-}
-
-body {
-  background-color: #ffffff;
-}
-
 * {
   box-sizing: border-box;
-}
-
-a {
-  color: $color__action--text;
-  font-weight: bold;
-  text-decoration: none;
-
-  &:focus {
-    color: $color__text;
-  }
-
-  @media (hover: none) {
-    text-decoration: underline;
-  }
-
-  @media (hover: hover) {
-    &:hover, &:focus {
-      text-decoration: underline;
-      color: $color__text;
-    }
-  }
 }
 
 .page-section {

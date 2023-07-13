@@ -113,7 +113,25 @@ $color__hero-bg: #eee;
 // BEGIN: skills.
 
 .home-skills__skills {
-  @include body-text;
+  @include narrow-content;
 }
 
 // END: skills.
+
+//
+//
+// BEGIN: work.
+
+.home-work__projects {
+  @include narrow-content;
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+  margin-top: 30px;
+
+  @media (min-width: $bp-m) {
+    gap: 60px;
+  }
+}
+
+// END: work.

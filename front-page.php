@@ -37,6 +37,7 @@
     $work_posts = get_posts([
       'post_type' => 'project',
       'numberposts' => 4,
+      'orderby' => 'menu_order',
     ]);
     foreach ($work_posts as $post) {
       setup_postdata($post);
@@ -59,7 +60,7 @@
           </div>
 
           <div class="card__my-role">
-            <h5>My role:</h5>
+            <h5 class="my-role__heading">My role:</h5>
 
             <?php the_field('my_role') ?>
           </div>
@@ -67,7 +68,7 @@
           <?php
           if (get_field('live_link')) {
             ?>
-            <a href="<?php the_field('live_link') ?>" class="card__button" target="_blank">View Live</a>
+            <a href="<?php the_field('live_link') ?>" class="card__button button button--outline button--small" target="_blank">View Live</a>
             <?php
           }
           ?>
