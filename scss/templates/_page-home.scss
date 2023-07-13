@@ -114,6 +114,13 @@ $color__hero-bg: #eee;
 
 .home-skills__skills {
   @include narrow-content;
+
+  h3 {
+    font-size: 0.8em;
+    font-family: $font-fam__secondary;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
 }
 
 // END: skills.

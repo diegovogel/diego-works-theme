@@ -20,7 +20,7 @@
   </div>
 </section>
 
-<section class="home-skills page-section">
+<section id="skills" class="home-skills page-section">
   <?php get_template_part( 'partials/fancy-heading', null, ['heading' => 'Skills', 'subheading' => get_field('experience_subheading')] ) ?>
 
   <div class="home-skills__skills">
@@ -28,7 +28,7 @@
   </div>
 </section>
 
-<section class="home-work page-section">
+<section id="work" class="home-work page-section">
   <?php get_template_part( 'partials/fancy-heading', null, ['heading' => 'Work', 'subheading' => get_field('work_subheading')] ) ?>
 
   <div class="home-work__projects">
@@ -68,7 +68,7 @@
           <?php
           if (get_field('live_link')) {
             ?>
-            <a href="<?php the_field('live_link') ?>" class="card__button button button--outline button--small" target="_blank">View Live</a>
+            <a href="<?php the_field('live_link') ?>" class="card__button button button--primary button--small" target="_blank">View Live Site</a>
             <?php
           }
           ?>
@@ -82,7 +82,7 @@
   </div>
 </section>
 
-<section class="home-journal page-section">
+<section id="journal" class="home-journal page-section">
   <?php get_template_part( 'partials/fancy-heading', null, ['heading' => 'Journal', 'subheading' => get_field('journal_subheading')] ) ?>
 
   <div class="home-journal__entries">
@@ -118,7 +118,7 @@
   </div>
 </section>
 
-<section class="home-contact page-section">
+<section id="contact" class="home-contact page-section">
 <?php get_template_part( 'partials/fancy-heading', null, ['heading' => 'Contact', 'subheading' => get_field('contact_subheading')] ) ?>
 
 <div class="form-wrap">
