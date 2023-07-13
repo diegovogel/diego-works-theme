@@ -132,7 +132,7 @@ main {
   max-width: var(--content--wide);
 }
 
-.site-header {
+.site-header.site-header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -145,28 +145,28 @@ main {
   z-index: 100;
 }
 @media (min-width: 60em) {
-  .site-header {
+  .site-header.site-header {
     padding: 20px;
   }
 }
-.site-header a {
+.site-header.site-header a {
   text-decoration: none;
   color: #000000;
 }
-.site-header a:hover, .site-header a:focus {
+.site-header.site-header a:hover, .site-header.site-header a:focus {
   color: #E05210;
 }
-.site-header h1 {
+.site-header.site-header h1 {
   margin: 0;
   line-height: 1;
   font-size: 32px;
 }
 @media (min-width: 60em) {
-  .site-header h1 {
+  .site-header.site-header h1 {
     font-size: 45px;
   }
 }
-.site-header .menu {
+.site-header.site-header .menu {
   padding: 0;
   margin: 0;
   display: flex;
@@ -174,20 +174,20 @@ main {
   font-family: "roboto", serif;
 }
 @media (min-width: 60em) {
-  .site-header .menu {
+  .site-header.site-header .menu {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
-.site-header .menu-item {
+.site-header.site-header .menu-item {
   margin: 0;
 }
-.site-header .menu-item a {
+.site-header.site-header .menu-item a {
   padding: 5px 10px;
 }
-.site-header #site-title {
+.site-header.site-header #site-title {
   font-family: "roboto", serif;
 }
 
@@ -592,6 +592,120 @@ a:focus {
 }
 .home-contact .form-wrap .button {
   margin-top: 20px;
+}
+
+.journal-entry__header {
+  padding: 60px 0 30px;
+  background: rgb(76, 201, 155);
+  background: linear-gradient(122deg, rgba(76, 201, 155, 0.3) 0%, rgba(244, 160, 120, 0.3) 100%);
+  margin-bottom: 30px;
+}
+.journal-entry__header .entry__title {
+  max-width: calc(var(--content--narrow) + var(--pad__body-x) * 2);
+  padding: 0 var(--pad__body-x);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: "roboto", serif;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.journal-entry__meta {
+  max-width: calc(var(--content--narrow) + var(--pad__body-x) * 2);
+  padding: 0 var(--pad__body-x);
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "roboto", serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 60px;
+}
+
+.journal-entry__content {
+  max-width: calc(var(--content--narrow) + var(--pad__body-x) * 2);
+  padding: 0 var(--pad__body-x);
+  margin-left: auto;
+  margin-right: auto;
+}
+.journal-entry__content code {
+  background-color: #ddd;
+  border-radius: 0.3em;
+  padding: 0.15em 0.8em;
+}
+.journal-entry__content h1,
+.journal-entry__content h2,
+.journal-entry__content h3,
+.journal-entry__content h4,
+.journal-entry__content h5,
+.journal-entry__content h6 {
+  font-family: "roboto", serif;
+}
+
+.wp-block-image,
+.wp-block-kevinbatdorf-code-block-pro,
+.wp-block-cp-codepen-gutenberg-embed-block {
+  margin: 30px 0;
+}
+
+.journal-entry__author {
+  max-width: calc(var(--content--narrow) + var(--pad__body-x) * 2);
+  padding: 0 var(--pad__body-x);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 120px;
+  margin-top: 60px;
+  padding-top: 60px;
+  position: relative;
+}
+.journal-entry__author::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 40%;
+  max-width: 200px;
+  position: absolute;
+  left: var(--pad__body-x);
+  background-color: #4CC99B;
+  top: 0;
+}
+.journal-entry__author .author__heading {
+  font-family: "roboto", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.journal-entry__author .author__box {
+  border: solid 1px #000000;
+  border-radius: 0 70px 40px 20px;
+  max-width: 24em;
+}
+.journal-entry__author .box__header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.journal-entry__author .box__author-name {
+  font-family: "roboto", serif;
+  font-size: 45px;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.2;
+  padding-right: 10px;
+}
+.journal-entry__author .avatar {
+  width: 50%;
+  height: auto;
+  border-radius: 0 0 50% 0;
+}
+.journal-entry__author .box__body {
+  padding: 18px;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
 }
 
 /*

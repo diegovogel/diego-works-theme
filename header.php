@@ -15,15 +15,11 @@
     <header id="header" role="banner" class="site-header">
       <div id="branding">
         <div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <h1>
           <?php
-          if (is_front_page() || is_home() || is_front_page() && is_home()) {
-            echo '<h1>';
-          }
           echo '<a href="' . esc_url(home_url('/')) . '" title="' . esc_attr(get_bloginfo('name')) . '" rel="home" itemprop="url"><span itemprop="name">' . esc_html(get_bloginfo('name')) . '</span></a>';
-          if (is_front_page() || is_home() || is_front_page() && is_home()) {
-            echo '</h1>';
-          }
           ?>
+          </h1>
         </div>
       </div>
       <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">

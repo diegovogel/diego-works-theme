@@ -1,0 +1,108 @@
+@use "../vars-mixins" as *;
+
+.journal-entry__header {
+  padding: 60px 0 30px;
+  background: rgb(76, 201, 155);
+  background: linear-gradient(
+    122deg,
+    rgba(76, 201, 155, 0.3) 0%,
+    rgba(244, 160, 120, 0.3) 100%
+  );
+  margin-bottom: 30px;
+
+  .entry__title {
+    @include narrow-content;
+    margin-bottom: 0;
+    text-align: center;
+    @include typo__heading--m;
+  }
+}
+
+.journal-entry__meta {
+  @include narrow-content;
+  @include typo__tag;
+  margin-bottom: 60px;
+}
+
+.journal-entry__content {
+  @include narrow-content;
+
+  code {
+    background-color: #ddd;
+    border-radius: 0.3em;
+    padding: 0.15em 0.8em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-fam__secondary;
+  }
+}
+
+.wp-block-image,
+.wp-block-kevinbatdorf-code-block-pro,
+.wp-block-cp-codepen-gutenberg-embed-block {
+  margin: 30px 0;
+}
+
+.journal-entry__author {
+  @include narrow-content;
+  margin-bottom: 120px;
+  margin-top: 60px;
+  padding-top: 60px;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 40%;
+    max-width: 200px;
+    position: absolute;
+    left: var(--pad__body-x);
+    background-color: $color__accent;
+    top: 0;
+  }
+
+  .author__heading {
+    @include typo__heading--s;
+  }
+
+  .author__box {
+    border: solid 1px $color__black;
+    border-radius: 0 70px 40px 20px;
+    max-width: 24em;
+  }
+
+  .box__header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .box__author-name {
+    font-family: $font-fam__secondary;
+    font-size: 45px;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.2;
+    padding-right: 10px;
+  }
+
+  .avatar {
+    width: 50%;
+    height: auto;
+    border-radius: 0 0 50% 0;
+  }
+
+  .box__body {
+    padding: 18px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+  }
+}
