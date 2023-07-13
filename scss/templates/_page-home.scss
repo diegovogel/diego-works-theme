@@ -148,3 +148,21 @@ $color__hero-bg: #eee;
 }
 
 // END: journal.
+
+//
+//
+// BEGIN: contact.
+
+.home-contact {
+  .form-wrap {
+    @include narrow-content;
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    .button {
+      margin-top: 20px;
+    }
+  }
+}
+
+// END: contact.

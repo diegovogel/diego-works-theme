@@ -97,7 +97,9 @@
         ?>
     
         <div class="journal-card">
-          <h4 class="card__title"><?php the_title() ?></h4>
+          <a href="<? the_permalink() ?>" class="card__link">
+            <h4 class="card__title"><?php the_title() ?></h4>
+          </a>
 
           <p class="card__meta">
             <?= get_the_date( 'F j, Y' ) ?>
