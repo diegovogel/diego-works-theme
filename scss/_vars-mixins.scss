@@ -47,4 +47,11 @@ $bp-3xl: 120em; // 1920px
   line-height: 1.2;
 }
 
+@mixin body-text {
+  max-width: calc(var(--content--narrow) + var(--pad__body-x) * 2);
+  padding: 0 var(--pad__body-x);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // END: mixins.

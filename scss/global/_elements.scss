@@ -1,1 +1,32 @@
-@use '../vars-mixins' as *;
+@use "../vars-mixins" as *;
+
+//
+//
+// BEGIN: fancy section heading.
+
+.fancy-section-heading {
+  position: relative;
+  font-size: 230px;
+
+  .heading {
+    white-space: nowrap;
+    line-height: 1;
+    margin: 0;
+    color: $color__accent--light;
+    font-family: $font-fam__secondary;
+    font-weight: 900;
+    width: 100vw;
+  }
+
+  .subheading {
+    position: absolute;
+    bottom: 0.7em;
+    left: 0;
+    width: 100%;
+    padding: 0 var(--pad__body-x);
+    font-size: 0.1em;
+    @include typo__heading--m;
+  }
+}
+
+// END: fancy section heading.

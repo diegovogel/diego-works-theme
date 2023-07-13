@@ -5,12 +5,12 @@
 // BEGIN: CSS vars.
 
 :root {
-  --pad__body-x: 20px;
+  --pad__body-x: 30px;
   --content--wide: 75rem;
   --content--narrow: 50rem;
 
   @media (min-width: $bp-m) {
-    --pad__body-x: 40px;
+    --pad__body-x: 60px;
   }
 }
 

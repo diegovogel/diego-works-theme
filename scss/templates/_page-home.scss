@@ -1,1 +1,119 @@
-@use '../vars-mixins' as *;
+@use "../vars-mixins" as *;
+
+//
+//
+// BEGIN: hero
+
+$bp__hero: $bp-l;
+$color__hero-bg: #eee;
+
+.home-hero {
+  @media (min-width: $bp__hero) {
+    display: flex;
+  }
+}
+
+.home-hero__image {
+  padding: 80px 40px;
+  background: $color__hero-bg;
+
+  @media (min-width: $bp__hero) {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 70%,
+      rgba(238, 238, 238, 1) 70%,
+      rgba(238, 238, 238, 1) 100%
+    );
+    flex: 1;
+    padding-right: 4vw;
+  }
+
+  img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%) contrast(110%) brightness(1.1);
+  }
+
+  .image-wrapper {
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    max-width: 500px;
+    margin: auto;
+
+    @media (min-width: $bp__hero) {
+      margin-right: 0;
+      max-width: 800px;
+      width: 80%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+          155deg,
+          rgba(244, 160, 120, 1) 0%,
+          rgba(76, 201, 155, 1) 100%
+        ),
+        lightgray 50% / cover no-repeat;
+      opacity: 0.3;
+      z-index: 1;
+    }
+  }
+}
+
+.home-hero__text {
+  padding: 0 var(--pad__body-x);
+  margin: auto;
+
+  @media (min-width: $bp__hero) {
+    padding: 0 var(--pad__body-x) 0 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background: $color__hero-bg;
+    max-width: 100%;
+    flex: 1;
+  }
+
+  p {
+    max-width: var(--content--narrow);
+  }
+}
+
+.home-hero__heading {
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  margin-top: -0.5em;
+  font-size: 44px;
+  font-family: $font-fam__secondary;
+  font-weight: 900;
+  margin-bottom: 1.5em;
+
+  @media (min-width: $bp__hero) {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 64px;
+    text-align: left;
+  }
+}
+
+// END: hero.
+
+//
+//
+// BEGIN: skills.
+
+.home-skills__skills {
+  @include body-text;
+}
+
+// END: skills.

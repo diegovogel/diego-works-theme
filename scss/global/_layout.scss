@@ -1,5 +1,13 @@
 @use "../vars-mixins" as *;
 
+html {
+  overflow-x: hidden;
+}
+
+main {
+  overflow-x: hidden;
+}
+
 img {
   max-width: 100%;
   vertical-align: bottom;
@@ -11,6 +19,32 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+a {
+  color: $color__action--text;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:focus {
+    color: $color__text;
+  }
+
+  @media (hover: none) {
+    text-decoration: underline;
+  }
+
+  @media (hover: hover) {
+    &:hover, &:focus {
+      text-decoration: underline;
+      color: $color__text;
+    }
+  }
+}
+
+.page-section {
+  margin: 0 auto 30px;
+  max-width: var(--content--wide);
 }
 
 //
@@ -27,6 +61,7 @@ body {
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 100;
 
   @media (min-width: $bp-l) {
     padding: 20px;
@@ -36,7 +71,8 @@ body {
     text-decoration: none;
     color: $color__text;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $color__action--text;
     }
   }
@@ -60,9 +96,9 @@ body {
 
     @media (min-width: $bp-l) {
       position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
