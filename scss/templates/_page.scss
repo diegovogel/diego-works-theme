@@ -1,0 +1,12 @@
+@use "../vars-mixins" as *;
+
+body.page-template-default.page {
+  .hentry {
+    @include narrow-content;
+    margin-bottom: 120px;
+
+    .header {
+      padding: 60px 0 30px;
+    }
+  }
+}
