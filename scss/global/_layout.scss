@@ -1,4 +1,4 @@
-@use '../vars-mixins' as *;
+@use "../vars-mixins" as *;
 
 img {
   max-width: 100%;
@@ -12,3 +12,69 @@ body {
 * {
   box-sizing: border-box;
 }
+
+//
+//
+// BEGIN: site header.
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  font-weight: 700;
+  border-bottom: solid 1px $color__black;
+  position: sticky;
+  top: 0;
+  background-color: white;
+
+  @media (min-width: $bp-l) {
+    padding: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color__text;
+
+    &:hover, &:focus {
+      color: $color__action--text;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    line-height: 1;
+    font-size: 32px;
+
+    @media (min-width: $bp-l) {
+      font-size: 45px;
+    }
+  }
+
+  .menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    font-family: $font-fam__secondary;
+
+    @media (min-width: $bp-l) {
+      position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    }
+  }
+
+  .menu-item {
+    a {
+      padding: 5px 10px;
+    }
+  }
+
+  #site-title {
+    font-family: $font-fam__secondary;
+  }
+}
+
+// END: site header.

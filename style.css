@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import '~normalize.css/normalize.css';
 :root {
   --pad__body-x: 20px;
   --content--wide: 75rem;
@@ -84,7 +83,7 @@
 }
 
 body {
-  font-family: museo, sans-serif;
+  font-family: "museo", sans-serif;
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.7;
@@ -113,6 +112,61 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  font-weight: 700;
+  border-bottom: solid 1px #000000;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+@media (min-width: 60em) {
+  .site-header {
+    padding: 20px;
+  }
+}
+.site-header a {
+  text-decoration: none;
+  color: #000000;
+}
+.site-header a:hover, .site-header a:focus {
+  color: #E05210;
+}
+.site-header h1 {
+  margin: 0;
+  line-height: 1;
+  font-size: 32px;
+}
+@media (min-width: 60em) {
+  .site-header h1 {
+    font-size: 45px;
+  }
+}
+.site-header .menu {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  font-family: "roboto", serif;
+}
+@media (min-width: 60em) {
+  .site-header .menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.site-header .menu-item a {
+  padding: 5px 10px;
+}
+.site-header #site-title {
+  font-family: "roboto", serif;
 }
 
 /*

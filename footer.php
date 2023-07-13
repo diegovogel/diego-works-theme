@@ -1,6 +1,6 @@
 </main>
 </div>
-<footer id="footer" role="contentinfo">
+<footer id="footer" role="contentinfo" class="site-footer">
 <div id="copyright">
 &copy; <?php echo esc_html( date_i18n( __( 'Y', 'diegoworks' ) ) ); ?> Diego Vogel
 </div>
