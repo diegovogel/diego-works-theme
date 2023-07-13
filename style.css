@@ -191,6 +191,20 @@ main {
   font-family: "roboto", serif;
 }
 
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  padding: 20px;
+  border-top: solid 1px;
+  font-family: "roboto", serif;
+}
+.site-footer a {
+  color: #000000;
+  font-weight: 300;
+  text-decoration: none;
+}
+
 .fancy-section-heading {
   position: relative;
   font-size: 230px;

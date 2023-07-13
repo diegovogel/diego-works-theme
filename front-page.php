@@ -102,12 +102,8 @@
           <p class="card__meta">
             <?= get_the_date( 'F j, Y' ) ?>
           </p>
-          
-          <!-- <div class="card__excerpt">
-            <?php the_excerpt() ?>
-          </div> -->
 
-          <button class="touchscreen card__button button button--text" aria-hidden="true">Read More</button>
+          <button class="touchscreen card__button button button--text" aria-hidden="true">Read</button>
 
           <p class="card__tags">
             <?= strip_tags(get_the_tag_list( 'Tags: ', ', ', '', get_the_ID() )) ?>
@@ -118,6 +114,14 @@
       wp_reset_postdata();
       ?>
   </div>
+</section>
+
+<section class="home-contact page-section">
+<?php get_template_part( 'partials/fancy-heading', null, ['heading' => 'Contact', 'subheading' => get_field('contact_subheading')] ) ?>
+
+<div class="form-wrap">
+  <?= do_shortcode( get_field('form_shortcode') ) ?>
+</div>
 </section>
 
 <?php get_footer(); ?>

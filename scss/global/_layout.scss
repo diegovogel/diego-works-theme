@@ -74,7 +74,7 @@ main {
 
   .menu-item {
     margin: 0;
-    
+
     a {
       padding: 5px 10px;
     }
@@ -86,3 +86,24 @@ main {
 }
 
 // END: site header.
+
+//
+//
+// BEGIN: site footer.
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: .75rem;
+  padding: 20px;
+  border-top: solid 1px;
+  font-family: $font-fam__secondary;
+
+  a {
+    color: $color__text;
+    font-weight: 300;
+    text-decoration: none;
+  }
+}
+
+// END: site footer.
