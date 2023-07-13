@@ -90,21 +90,28 @@
       global $post;
       $journal_posts = get_posts([
         'post_type' => 'post',
+        'numberposts' => -1,
       ]);
       foreach ($journal_posts as $post) {
         setup_postdata($post);
         ?>
     
-        <div class="journal-entry">
-          <h4 class="entry__title"><?php the_title() ?></h4>
-          
-          <div class="entry__excerpt">
-            <?php the_excerpt() ?>
-          </div>
+        <div class="journal-card">
+          <h4 class="card__title"><?php the_title() ?></h4>
 
-          <div class="entry__tags">
+          <p class="card__meta">
+            <?= get_the_date( 'F j, Y' ) ?>
+          </p>
+          
+          <!-- <div class="card__excerpt">
+            <?php the_excerpt() ?>
+          </div> -->
+
+          <button class="touchscreen card__button button button--text" aria-hidden="true">Read More</button>
+
+          <p class="card__tags">
             <?= strip_tags(get_the_tag_list( 'Tags: ', ', ', '', get_the_ID() )) ?>
-          </div>
+          </p>
         </div>
         <?php
       }

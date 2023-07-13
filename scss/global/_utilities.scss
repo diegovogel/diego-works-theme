@@ -88,8 +88,15 @@
   white-space: nowrap
 }
 
-.desktop {
+.desktop.desktop.desktop {
   display: none; // Mobile-first, all desktop-only items start hidden.
+}
+
+// Touchscreen-only elements are not visible if hover is available.
+.touchscreen.touchscreen.touchscreen {
+  @media (hover: hover) {
+    display: none;
+  }
 }
 
 // END: utility classes.

@@ -78,8 +78,14 @@
   white-space: nowrap;
 }
 
-.desktop {
+.desktop.desktop.desktop {
   display: none;
+}
+
+@media (hover: hover) {
+  .touchscreen.touchscreen.touchscreen {
+    display: none;
+  }
 }
 
 body {
@@ -175,6 +181,9 @@ main {
     transform: translate(-50%, -50%);
   }
 }
+.site-header .menu-item {
+  margin: 0;
+}
 .site-header .menu-item a {
   padding: 5px 10px;
 }
@@ -255,6 +264,60 @@ main {
   color: #767676;
 }
 
+.journal-card {
+  padding: 0 0 40px;
+  position: relative;
+  transition: 0.2s;
+}
+.journal-card + .journal-card {
+  padding-top: 40px;
+  border-top: solid 1px #000000;
+}
+@media (hover: hover) {
+  .journal-card {
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .journal-card:hover, .journal-card:focus {
+    background: #eee;
+  }
+}
+.journal-card .card__title {
+  font-family: "roboto", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.journal-card .card__meta {
+  font-family: "roboto", serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #767676;
+}
+.journal-card .card__tags {
+  font-family: "roboto", serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #767676;
+}
+.journal-card .more-link {
+  text-decoration: none;
+}
+.journal-card .more-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.journal-card .card__button {
+  margin-bottom: 1em;
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -292,6 +355,15 @@ main {
 .button--small {
   font-size: 1rem;
   padding: 10px 20px;
+}
+
+.button--text {
+  padding: 10px 0;
+  border: none;
+  background: none;
+  text-decoration: underline;
+  font-style: italic;
+  color: #E05210;
 }
 
 img {
@@ -433,6 +505,16 @@ a:focus {
   .home-work__projects {
     gap: 60px;
   }
+}
+
+.home-journal__entries {
+  max-width: calc(var(--content--narrow) + var(--pad__body-x) * 2);
+  padding: 0 var(--pad__body-x);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: column;
+  margin-top: 30px;
 }
 
 /*
