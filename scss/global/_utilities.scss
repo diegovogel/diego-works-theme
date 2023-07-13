@@ -1,15 +1,26 @@
-@charset "UTF-8";
+@use '../vars-mixins' as *;
+
 @import '~normalize.css/normalize.css';
+
+//
+//
+// BEGIN: CSS vars.
+
 :root {
   --pad__body-x: 20px;
   --content--wide: 75rem;
   --content--narrow: 50rem;
-}
-@media (min-width: 45em) {
-  :root {
+
+  @media (min-width: $bp-m) {
     --pad__body-x: 40px;
   }
 }
+
+// END: CSS vars.
+
+//
+//
+// BEGIN: utility classes.
 
 .screen-reader-text {
   border: 0;
@@ -23,20 +34,20 @@
   position: absolute !important;
   width: 1px;
   word-wrap: normal !important;
-  word-break: normal;
+  word-break: normal
 }
 
 .screen-reader-text:focus {
   background-color: #f7f7f7;
   border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
   clip: auto !important;
   -webkit-clip-path: none;
   clip-path: none;
   color: #007acc;
   display: block;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: .875rem;
   font-weight: 700;
   height: auto;
   right: 5px;
@@ -45,14 +56,14 @@
   text-decoration: none;
   top: 5px;
   width: auto;
-  z-index: 100000;
+  z-index: 100000
 }
 
 .skip-link {
   left: -9999rem;
   top: 2.5rem;
   z-index: 999999999;
-  text-decoration: underline;
+  text-decoration: underline
 }
 
 .skip-link:focus {
@@ -65,7 +76,7 @@
   line-height: normal;
   padding: 15px 23px 14px;
   z-index: 100000;
-  right: auto;
+  right: auto
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -76,53 +87,11 @@
   overflow: hidden;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
+  white-space: nowrap
 }
 
 .desktop {
-  display: none;
+  display: none; // Mobile-first, all desktop-only items start hidden.
 }
 
-body {
-  font-family: museo, sans-serif;
-  font-weight: 300;
-  font-size: 1.125rem;
-  line-height: 1.7;
-}
-
-p {
-  margin: 0 0 1em;
-}
-
-h1, h2, h3 {
-  margin: 0 0 0.5em;
-}
-
-h4, h5, h6 {
-  margin: 0 0 1em;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: bottom;
-}
-
-body {
-  background-color: #ffffff;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/*
-Theme Name: Diego Works
-Author: Diego Vogel
-Author URI: https://www.diego.works
-Text Domain: diegoworks
-
-BlankSlate WordPress Theme © 2011-2023 TidyThemes
-BlankSlate is distributed under the terms of the GNU GPL
-*/
-
-/*# sourceMappingURL=style.css.map */
+// END: utility classes.

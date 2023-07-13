@@ -1,0 +1,14 @@
+@use '../vars-mixins' as *;
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,17 @@
+@use '../vars-mixins' as *;
+
+body {
+  @include typo__body;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.5em;
+}
+
+h4, h5, h6 {
+  margin: 0 0 1em;
+}

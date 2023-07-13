@@ -1,0 +1,50 @@
+// BEGIN: variables.
+
+$font-fam__primary: museo, sans-serif;
+$font-fam__secondary: 'Roboto', serif;
+
+$color__accent: #4CC99B;
+$color__accent--light: #E3F5EF;
+$color__accent--black: #24302B;
+$color__action: #F9C3AA;
+$color__action--light: #FFEFE8;
+$color__action--black: #3D302A;
+$color__action--text: #E05210;
+$color__black: #000000;
+$color__text: $color__black;
+
+$bp-s: 30em; // 480px
+$bp-m: 45em; // 720px
+$bp-l: 60em; // 960px
+$bp-xl: 75em; // 1200px
+$bp-2xl: 90em; // 1440px
+$bp-3xl: 120em; // 1920px
+
+// END: variables.
+
+//
+//
+// BEGIN: mixins.
+
+@mixin typo__body {
+  font-family: $font-fam__primary;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+@mixin typo__heading--s {
+  font-family: $font-fam__secondary;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+@mixin typo__heading--m {
+  font-family: $font-fam__secondary;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+// END: mixins.
