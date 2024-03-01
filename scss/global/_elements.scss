@@ -151,64 +151,28 @@ $radius__project: 6px;
 // BEGIN: buttons.
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  padding: 15px 40px;
-  border: solid 2px $color__black;
-  font-family: $font-fam__secondary;
-  font-weight: bold;
-  font-size: 1.125rem;
-  color: $color__black;
-  border-radius: 5px;
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
+  @include button;
 }
 
 .button--primary {
-  background-color: $color__action;
-
-  &:hover,
-  &:focus {
-    background-color: $color__black;
-    color: white;
-  }
+  @include button-primary;
 }
 
 .button--outline {
-  background-color: none;
-
-  @media (hover: none) {
-    background-color: $color__black;
-    color: white;
-  }
-
-  @media (hover: hover) {
-    &:hover,
-    &:focus {
-      background-color: $color__black;
-      color: white;
-    }
-  }
+  @include button-outline;
 }
 
 .button--small {
-  font-size: 1rem;
-  padding: 10px 20px;
+  @include button-small;
 }
 
 .button--text {
-  padding: 10px 0;
-  border: none;
-  background: none;
-  text-decoration: underline;
-  font-style: italic;
-  color: $color__action--text;
+  @include button-text;
+}
+
+.wp-element-button {
+  @include button;
+  @include button-primary;
 }
 
 // END: buttons.
