@@ -186,3 +186,16 @@ function diegoworks_comment_count($count)
     return $count;
   }
 }
+
+/**
+ * Redirects author pages to home page.
+ *
+ * @return void
+ */
+function dw_author_page_redirect(): void {
+	if ( is_author() ) {
+		wp_redirect( home_url() );
+	}
+}
+
+add_action( 'template_redirect', 'dw_author_page_redirect' );
