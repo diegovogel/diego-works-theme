@@ -43,7 +43,7 @@
         ?>
     
         <div class="journal-card">
-          <a href="<? the_permalink() ?>" class="card__link">
+          <a href="<?php the_permalink() ?>" class="card__link">
             <h4 class="card__title"><?php the_title() ?></h4>
           </a>
 
