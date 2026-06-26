@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'DIEGO_WORKS_VERSION' ) ) {
-	define( 'DIEGO_WORKS_VERSION', '1.0.0-' . date('Ymd') );
+	define( 'DIEGO_WORKS_VERSION', '1.0.1-' . date('Ymd') );
 }
 
 add_action('after_setup_theme', 'diegoworks_setup');
