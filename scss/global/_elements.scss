@@ -46,10 +46,11 @@ $radius__project: 6px;
   .card__image {
     width: 100%;
     aspect-ratio: 4/3;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     border-radius: $radius__project $radius__project 0 0;
     border-bottom: solid 1px $color__black;
+    background-color: #ddd;
   }
 
   .card__text {
@@ -64,7 +65,7 @@ $radius__project: 6px;
     }
 
     ul {
-      padding: 0 0 0 0.8em;
+      padding: 0 0 0 1.2em;
     }
   }
 
